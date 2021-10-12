@@ -8,4 +8,4 @@ Feature: code-braeker starts game
     Given I am not yet playing
     When I start a new game
     Then I should see "Welcome to Codebraker!"
-    And I shold see "Enter guess"
+    And I shold see "Enter guess:"
