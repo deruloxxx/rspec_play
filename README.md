@@ -1,3 +1,21 @@
+# Setup
+
+Use bundler
+
+```
+bundle install
+```
+
+# Acceptance Testing
+
+```
+rake cucumber
+```
+
+---
+
+# Below are archives
+
 # README
 
 This README would normally document whatever steps are necessary to get the
