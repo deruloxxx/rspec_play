@@ -6,5 +6,5 @@ require_relative "config/application"
 Rails.application.load_tasks
 
 task :cucumber do
-  sh "cucumber codebreaker/features/step_definitions/codebreaker_steps.rb"
+  sh "bundle exec cucumber codebreaker/features/codebreaker_starts_game.feature"
 end
