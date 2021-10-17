@@ -1,6 +1,6 @@
-Feature: code-braeker starts game
+Feature: code-breaker starts game
 
-    AS a code-braeker
+    AS a code-breaker
     I want to start a game
     So that I can brake the code
 
