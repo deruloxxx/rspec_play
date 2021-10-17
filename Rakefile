@@ -4,3 +4,7 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+task :cucumber do
+  sh "cucumber codebreaker/features/step_definitions/codebreaker_steps.rb"
+end
