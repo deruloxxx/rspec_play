@@ -22,7 +22,7 @@ Given /^the secret code is "([^"]*)"$/ do |secret|
 end
 
 When /^I start a new game$/ do
-  game = Codebreaker:Game.new(Fixture.output)
+  game = Codebreaker::Game.new(Fixture.output)
   game.start
 end
 
