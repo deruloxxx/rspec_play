@@ -25,6 +25,6 @@ When /^I guess "([^"]*)"$/ do |guess|
   @game.guess(guess)
 end
 
-Then('the mark should be {string}') do |string|
-  Fixture.output.should include(string)
+Then /^the mark should be "([^"]*)"$/ do |mark|
+  Fixture.output.messages.should include()
 end
