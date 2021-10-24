@@ -17,15 +17,14 @@ module Fixture
 end
 
 Given /^the secret code is "([^"]*)"$/ do |secret|
-  game = Codebreaker::Game.new(Fixture.output)
-  game.start(secret)
+  @game = Codebreaker::Game.new(Fixture.output)
+  @game.start(secret)
 end
 
-When /^I start a new game$/ do
-  game = Codebreaker::Game.new(Fixture.output)
-  game.start
+When /^I guess "([^"]*)"$/ do |guess|
+  @game.guess(guess)
 end
 
-Then /^'I should see "([^"]*)"$/ do |message|
-  output.messages.should include(message)
+Then('the mark should be {string}') do |string|
+  Fixture.output.should include(string)
 end
