@@ -4,15 +4,15 @@ module Codebreaker
   describe Game do
     let(:output) { double('output').as_null_object }
     let(:game) { Game.new(output) }
-    
+
     describe "#start" do
       it "sends a welcome message" do
-        output.should_receive(:puts).with('Welcome to Codebreaker!')
+        expect(output).to receive(:puts).with('Welcome to Codebreaker!')
         game.start('1234')
       end
 
       it "prompts for the first guess" do
-        output.should_receive(:puts).with('Enter guess:')
+        expect(output).to receive(:puts).with('Enter guess:')
         game.start('1234')
       end
     end
@@ -21,15 +21,15 @@ module Codebreaker
       context "with no matches" do
         it "sends a mark with ''" do
           game.start('1234')
-          output.should_receive(:puts).with('')
+          expect(output).to receive(:puts).with('')
           game.guess('5555')
         end
       end
-      
+
       context "with 1 number matches" do
         it "sends a mark with '-'" do
           game.start('1234')
-          output.should_receive(:puts).with('-')
+          expect(output).to receive(:puts).with('-')
           game.guess('2555')
         end
       end
