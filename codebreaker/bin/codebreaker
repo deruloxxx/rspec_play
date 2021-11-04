@@ -5,7 +5,7 @@ require 'codebreaker'
 
 def generate_secret_code
   options = %w[1 2 3 4 5 6]
-  (1..4).map [{options.delete_at(rand(options.length))}].join
+  (1..4).map{options.delete_at(rand(options.length))}.join
 end
 
 game = Codebreaker::Game.new(STDOUT)
